@@ -2,48 +2,35 @@
 
 Welcome to my data analytics portfolio! This repository showcases my projects in SQL, Power BI, and data analysis.
 
-## Repository Structure
+## Projects
 
-### 01 - SQL Data Cleaning
-Data cleaning and transformation projects demonstrating data quality improvement techniques.
-- **[World Life Expectancy](./01-SQL-Data-Cleaning/World-Life-Expectancy/)** - Cleaning global health dataset (2,941 records)
+### World Life Expectancy Analysis
+**Technologies:** MySQL, SQL Window Functions, Data Cleaning  
 
-### 02 - SQL Data Analysis  
-Exploratory data analysis and business intelligence queries.
-- *Coming soon*
+Comprehensive analysis of global life expectancy data spanning 15 years across 193 countries.
 
-### 03 - Power BI Dashboards
-Interactive dashboards and data visualizations.
-- *Coming soon*
-
-## Technical Skills
-- **SQL:** MySQL, Window Functions, CTEs, Joins, Data Cleaning
-- **Power BI:** Dashboard Development (Coming soon)
-- **Data Analysis:** Data Profiling, Quality Assessment, Statistical Analysis
-
-## Featured Project
-
-### World Life Expectancy - Data Cleaning
-**Technologies:** MySQL, SQL Window Functions  
-
-**Key Achievements:**
-- Cleaned 2,941 records across 193 countries (2007-2022)
-- Removed duplicate entries using `ROW_NUMBER()` window function
-- Filled missing Life Expectancy values using neighboring year averages
-- Standardized Status field (Developing/Developed) using self-joins
+**Key Highlights:**
+- Cleaned 2,941 records using advanced SQL techniques
+- Discovered 13-year life expectancy gap between developed and developing nations
+- Analyzed correlations between GDP, health metrics, and life expectancy
+- Implemented window functions for rolling totals and trend analysis
 
 **Skills Demonstrated:**
-- Duplicate detection and removal
-- Missing value imputation
-- Window functions (`ROW_NUMBER()`)
-- Self-join techniques
-- Data validation
+- Data cleaning and quality improvement
+- Exploratory data analysis (EDA)
+- Window functions (ROW_NUMBER, PARTITION BY, OVER)
+- Self-joins and conditional logic
+- Statistical analysis and aggregation
 
-[View Project →](./01-SQL-Data-Cleaning/World-Life-Expectancy/)
+[View Project →](./world-life-expectancy-project/)
 
-## Connect With Me
-- **LinkedIn:** [linkedin.com/in/phuc-le-6145aa375](https://www.linkedin.com/in/phuc-le-6145aa375/)
-- **Email:** le.luke06@gmail.com
+---
+
+## Technical Skills
+
+- **SQL:** MySQL, Window Functions, CTEs, Joins, Aggregations, Data Cleaning
+- **Data Analysis:** Exploratory Data Analysis, Statistical Analysis, Data Quality Assessment
+- **Tools:** MySQL Workbench, GitHub
 
 ## Currently Learning
 - Advanced SQL optimization
@@ -51,6 +38,6 @@ Interactive dashboards and data visualizations.
 - Python for data analysis
 - Tableau
 
----
-
-*Last updated: January 2026*
+## Connect With Me
+- **LinkedIn:** [linkedin.com/in/phuc-le-6145aa375](https://www.linkedin.com/in/phuc-le-6145aa375/)
+- **Email:** le.luke06@gmail.com
