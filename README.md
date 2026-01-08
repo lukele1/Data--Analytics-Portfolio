@@ -35,7 +35,7 @@ Interactive dashboards and data visualizations.
 **Skills Demonstrated:**
 - Duplicate detection and removal
 - Missing value imputation
-- Window functions (`ROW_NUMBER()`, `LAG()`, `LEAD()`)
+- Window functions (`ROW_NUMBER()`)
 - Self-join techniques
 - Data validation
 
