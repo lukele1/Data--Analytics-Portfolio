@@ -1,130 +1,80 @@
-# US Household Income Data Analysis
+US Household Income Analysis
+Project Overview
+Exploratory data analysis of US household income data examining geographic and economic patterns across states, counties, and community types. This project includes comprehensive data cleaning and explores relationships between household income and geographic characteristics.
+Dataset
 
-## Project Overview
-This project demonstrates SQL data cleaning and exploratory data analysis techniques using US household income data from the 2010-2014 American Community Survey. The analysis examines income patterns across states, counties, and different community types while exploring the relationship between geographic characteristics and household income levels.
+Source: US Census Bureau - American Community Survey (2010-2014)
+Records: 32,292 geographic entries
+States: All 50 US states plus territories
+Key Variables: State, County, City, Type (community classification), Mean Income, Median Income, Land Area (ALand), Water Area (AWater)
 
-## Dataset Information
-- **Source**: US Census Bureau - American Community Survey (2010-2014)
-- **Records**: 32,000+ geographic entries across all 50 states
-- **Key Fields**: Geographic identifiers (state, county, city), income statistics (mean, median), land/water area measurements
+Data Cleaning Process
 
-## Project Structure
-```
-US-Household-Income-Analysis/
-│
-├── data/
-│   ├── USHouseholdIncome.csv                    # Geographic and demographic data
-│   └── USHouseholdIncome_Statistics.csv         # Income statistics by area
-│
-├── sql_scripts/
-│   ├── USHouseholdIncome_-_Data_Cleaning.sql    # Data quality and cleaning queries
-│   └── USHouseholdIncome_-_EDA.sql              # Exploratory analysis queries
-│
-└── README.md
-```
+Removed duplicate records using ROW_NUMBER() window function with PARTITION BY
+Fixed state name inconsistencies ('georia' → 'Georgia', 'alabama' → 'Alabama')
+Standardized community type values ('Boroughs' → 'Borough')
+Filled missing Place values for Autauga County records
+Validated land and water area measurements for data quality
+Cleaned column name encoding issues in statistics table
 
-## Analysis Workflow
+Key Findings
+1. Income by Development Status
 
-### 1. Data Cleaning (`USHouseholdIncome_-_Data_Cleaning.sql`)
+Highest income states: District of Columbia, Connecticut, New Jersey
+Lowest income states: Puerto Rico, Mississippi, Arkansas
+Coastal and northeastern states show significantly higher average household income
+Southern and rural states consistently rank lower in average income
 
-**Key Cleaning Steps:**
-- **Duplicate Removal**: Identified and removed duplicate records using window functions (ROW_NUMBER with PARTITION BY)
-- **Standardization**: Fixed state name inconsistencies
-  - Corrected misspelling: 'georia' → 'Georgia'
-  - Fixed capitalization: 'alabama' → 'Alabama'
-- **Type Standardization**: Unified community type values ('Boroughs' → 'Borough')
-- **Missing Data Handling**: Filled in missing Place values for specific counties
-- **Data Validation**: Checked for records with missing or zero land/water area values
+2. Community Type Analysis
 
-**Technical Highlights:**
-- Used window functions for duplicate detection
-- Applied UPDATE statements for data corrections
-- Validated data quality with aggregate queries
+Urban areas (Cities, Municipalities) have highest average household income
+Rural tracks and CDPs show substantially lower income levels
+Community types with >100 records show more reliable statistical patterns
+Urban classification is a strong predictor of higher household income
 
-### 2. Exploratory Data Analysis (`USHouseholdIncome_-_EDA.sql`)
+3. Geographic Patterns
 
-**Key Analysis Questions:**
+Land area leaders: Alaska (1.48 trillion sq meters), Texas, California
+Water area leaders: Alaska (563 billion sq meters), Michigan, Florida
+Coastal states have significantly higher water area measurements
+No direct correlation between land/water area and income levels
 
-1. **Geographic Analysis**
-   - Top 10 states by total land area
-   - Top 10 states by total water area
+4. Statistical Insights
 
-2. **Income Analysis by State**
-   - States with highest average household income
-   - States with lowest average household income
-   - Comparison of mean vs median income by state
+Mean income consistently higher than median income across all areas
+Large gap between mean and median suggests income inequality within regions
+Community types with fewer than 100 records show unreliable income patterns
+Urban-rural income divide is substantial across all states
 
-3. **Community Type Analysis**
-   - Income patterns across different community types (City, Town, CDP, etc.)
-   - Filtered for statistically significant sample sizes (>100 records)
-   - Identified highest-earning community types
+SQL Techniques Used
 
-4. **City-Level Analysis**
-   - Average household income by city within each state
-   - Identified cities with highest mean and median income
+Data Cleaning: ROW_NUMBER(), PARTITION BY, UPDATE statements, ALTER TABLE
+Aggregate Functions: SUM, AVG, COUNT, ROUND
+Joins: INNER JOIN to combine geographic and income data
+Grouping & Filtering: GROUP BY with multiple columns, HAVING clause
+Sorting & Ranking: ORDER BY, LIMIT for top/bottom analysis
+Conditional Filtering: WHERE clauses to exclude invalid data (Mean <> 0)
+Subqueries: Nested queries for duplicate detection and complex filtering
 
-**SQL Techniques Demonstrated:**
-- INNER JOINs to combine geographic and income data
-- Aggregate functions (SUM, AVG, COUNT, ROUND)
-- GROUP BY with multiple columns
-- HAVING clause for filtering aggregated results
-- ORDER BY and LIMIT for ranking results
-- WHERE conditions to filter out invalid data (Mean <> 0)
+Tools & Technologies
 
-## Key Findings
+Database: MySQL Workbench
+Analysis Type: Data Cleaning & Exploratory Data Analysis (EDA)
+Key Skills: Data quality validation, geographic analysis, income analysis
 
-### Income Insights
-- **Highest Income States**: District of Columbia, Connecticut, and New Jersey lead in average household income
-- **Lowest Income States**: Puerto Rico, Mississippi, and Arkansas have the lowest average household income
-- **Community Types**: Urban areas and municipalities show higher average income compared to rural tracks and CDPs
+Insights & Observations
 
-### Geographic Patterns
-- **Largest Land Area**: Alaska, Texas, and California dominate in total land area
-- **Water Area**: Alaska, Michigan, and Florida have the most water area
-- Coastal states generally show higher water area measurements
+Economic development and urbanization strongly influence household income
+The income gap between urban and rural communities remains substantial
+Data quality issues (duplicates, typos, missing values) required careful preprocessing
+Geographic features (land/water area) do not directly predict income levels
+State-level averages mask significant within-state variation
 
-## Technical Skills Demonstrated
-- **SQL Fundamentals**: SELECT, JOIN, WHERE, GROUP BY, ORDER BY
-- **Data Cleaning**: Duplicate detection, data standardization, missing value handling
-- **Window Functions**: ROW_NUMBER() with PARTITION BY
-- **Aggregate Analysis**: COUNT, SUM, AVG with multiple grouping levels
-- **Data Quality**: Validation queries and filtering techniques
-- **Query Optimization**: Using subqueries and CTEs effectively
+Future Analysis Opportunities
 
-## Tools Used
-- **Database**: MySQL Workbench
-- **Language**: SQL
-- **Dataset Format**: CSV files
-
-## How to Use This Project
-
-1. **Set up the database**:
-```sql
-   CREATE DATABASE us_project;
-   USE us_project;
-```
-
-2. **Import the CSV files** into your MySQL database as:
-   - `us_household_income`
-   - `us_household_income_statistics`
-
-3. **Run the cleaning script first**:
-   - Execute `USHouseholdIncome_-_Data_Cleaning.sql` to prepare the data
-
-4. **Run the exploratory analysis**:
-   - Execute `USHouseholdIncome_-_EDA.sql` to generate insights
-
-## Future Enhancements
-- Add visualizations using Tableau or Power BI
-- Perform time-series analysis with additional years of data
-- Create calculated fields for income inequality metrics
-- Analyze correlation between geographic features and income levels
-- Build predictive models for income estimation
-
-## Connect With Me
-- **LinkedIn**: [Your LinkedIn URL]
-- **Portfolio**: [Your Portfolio Website]
-- **Email**: [Your Email]
-
----
-*This project is part of my data analytics portfolio demonstrating SQL proficiency for data cleaning and exploratory analysis.*
+Create interactive Tableau/Power BI visualizations by state and community type
+Analyze income inequality metrics within states and counties
+Compare income trends across multiple census periods (time-series analysis)
+Build predictive models for household income based on geographic features
+Regional clustering analysis to identify similar economic zones
+Correlation analysis between population density and income levels
