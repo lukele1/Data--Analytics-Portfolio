@@ -12,7 +12,7 @@ Comprehensive data analysis identifying customer churn patterns and quantifying 
 
 **Business Impact:** 20.37% churn rate (63% above industry standard) affecting 2,037 customers and $185.6M in account balances.
 
-<!-- INSERT IMAGE: Executive Summary Cover Page -->
+
 ![Executive Summary](images/executive-summary-cover.png)
 
 ---
@@ -59,7 +59,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 - Dynamic filters (Geography, Age Group, Gender, Products, Member Status)
 - Drill-down capabilities for detailed segment analysis
 
-<!-- INSERT IMAGE: Full Power BI Dashboard -->
+
 ![Power BI Dashboard](images/dashboard-full.png)
 
 **Dashboard Pages:**
@@ -86,7 +86,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 - Losing high-value customers in their prime earning years
 - Higher average balances than younger customers
 
-<!-- INSERT IMAGE: Churn by Age Chart -->
+
 ![Churn by Age](images/churn-by-age.png)
 
 **Recommended Actions:**
@@ -106,7 +106,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 - Small customer base (~3%) but complete product failure
 - Not a retention issue - this is a product failure
 
-<!-- INSERT IMAGE: Product Analysis Chart -->
+
 ![Product Analysis](images/product-analysis.png)
 
 **Recommended Actions:**
@@ -127,7 +127,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 - $98M in balance losses (53% of total)
 - $1.96M in annual revenue lost (53% of total)
 
-<!-- INSERT IMAGE: Churn by Geography Chart -->
+
 ![Churn by Geography](images/churn-by-geography.png)
 
 **Recommended Actions:**
@@ -148,7 +148,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 - Most profitable segment moving to competitors
 - Likely seeking better rates or premium services
 
-<!-- INSERT IMAGE: Churn by Balance Segment -->
+
 ![Churn by Balance](images/churn-by-balance.png)
 
 **Recommended Actions:**
@@ -181,7 +181,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 - 10-year customers leave at same rate as new customers
 - Indicates **systemic service issues**, not onboarding problems
 
-<!-- INSERT IMAGE: Churn by Tenure Chart -->
+
 ![Churn by Tenure](images/churn-by-tenure.png)
 
 **Implication:** Need comprehensive loyalty program overhaul, not just improved onboarding
@@ -237,7 +237,7 @@ GROUP BY Geography
 ORDER BY churn_rate_percent DESC;
 ```
 
-<!-- INSERT IMAGE: SQL Queries in MySQL Workbench -->
+
 ![SQL Analysis](images/sql-queries.png)
 
 ---
@@ -373,19 +373,6 @@ ORDER BY churn_rate_percent DESC;
 **Documentation:**
 - Microsoft Word
 - Markdown
-
----
-
-## How to View
-
-### Power BI Dashboard
-1. Download `Customer_Churn_Dashboard.pbix` from the `/dashboard` folder
-2. Open with Power BI Desktop (free download from Microsoft)
-3. Interact with filters to explore different segments
-
-### Executive Report
-- Full analysis available in Word and PDF formats in `/reports` folder
-- SQL queries documented in `/sql` folder
 
 ---
 
