@@ -376,29 +376,6 @@ ORDER BY churn_rate_percent DESC;
 
 ---
 
-## Repository Structure
-
-```
-bank-customer-churn-analysis/
-├── README.md                          # This file
-├── data/
-│   └── Churn_Modelling.csv           # Source dataset
-├── sql/
-│   ├── churn_analysis.sql            # Main analysis queries
-│   └── kpi_calculations.sql          # Financial metrics
-├── dashboard/
-│   └── Customer_Churn_Dashboard.pbix # Power BI file
-├── reports/
-│   ├── Executive_Summary.docx        # Full report (Word)
-│   └── Executive_Summary.pdf         # Full report (PDF)
-└── images/
-    ├── dashboard-full.png            # Dashboard screenshots
-    ├── churn-by-age.png
-    └── ...
-```
-
----
-
 ## How to View
 
 ### Power BI Dashboard
