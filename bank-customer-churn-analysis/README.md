@@ -73,7 +73,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 
 ### Critical Findings - Immediate Action Required
 
-#### 1. Age Cliff at 40 🚨
+#### 1. Age Cliff at 40 
 **Status: CRITICAL**
 
 **The Problem:**
@@ -98,7 +98,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 
 ---
 
-#### 2. Product 4 Crisis 🚨
+#### 2. Product 4 Crisis 
 **Status: EMERGENCY**
 
 **The Problem:**
@@ -118,7 +118,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 
 ---
 
-#### 3. German Market Collapse 🚨
+#### 3. German Market Collapse 
 **Status: URGENT**
 
 **The Problem:**
@@ -140,7 +140,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 
 ---
 
-#### 4. High Balance Customer Exodus 🚨
+#### 4. High Balance Customer Exodus 
 **Status: CRITICAL**
 
 **The Problem:**
@@ -162,12 +162,12 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 
 ### Positive Findings
 
-#### Product 2 Sweet Spot ✅
+#### Product 2 Sweet Spot 
 - Product 2 configuration has **LOWEST churn rate** across all product counts
 - This is the optimal customer setup
 - **Action:** Promote cross-sell campaigns to reach 2-product configuration
 
-#### Young Customer Loyalty ✅
+#### Young Customer Loyalty 
 - Customers under 40 show excellent retention (7-12% churn)
 - Current approach is **working** for this demographic
 - **Action:** Maintain current service model
@@ -176,7 +176,7 @@ Interactive Power BI dashboard with comprehensive churn analysis across multiple
 
 ### Concerning Findings
 
-#### Tenure Doesn't Matter ⚠️
+#### Tenure Doesn't Matter 
 - Churn rate is ~20% regardless of customer tenure
 - 10-year customers leave at same rate as new customers
 - Indicates **systemic service issues**, not onboarding problems
